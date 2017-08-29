@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Router } from '@angular/router';
 import { Hero } from './hero';
 import { HeroService } from './hero.service';
@@ -10,9 +9,9 @@ import { HeroService } from './hero.service';
   <li *ngFor="let hero of heroes"
   [class.selected]="hero === selectedHero"
   (click)="onSelect(hero)">
-  <a [routerLink]="['/detail', hero.id]">
+
         <span class="badge">{{hero.id}}</span> {{hero.name}}
-      </a>
+
   </li>
 </ul>
 <div *ngIf="selectedHero">
@@ -30,6 +29,8 @@ aboutTitle = "Latin 2 literature from 45 BC, making it over 2000 years old.";
 
 heroes: Hero[];
 selectedHero: Hero;
+
+
   constructor(
     private router: Router,
     private heroService: HeroService) { }
