@@ -1,7 +1,13 @@
 <div>
-<label> Welcome! {{homeTitle}}</label>
-<br>
-<input type="text"  [(ngModel)]="homeTitle" name="name"  value="">
-<br>
-<input type="submit" value="Submit">
+  <h1>Signup</h1>
+  <form   method="post" novalidate>
+    <label> Username</label>
+    <input type="text" name="username" [(ngModel)]="username" value="">
+    <br>
+    <label> Password</label>
+    <input type="password"  name="password" [(ngModel)]="password"  value="">
+    <br>
+    <input type="submit" value="Login" (click)="login()">
+  </form>
+
 </div>

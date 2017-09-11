@@ -9,9 +9,7 @@ import { HeroService } from './hero.service';
   <li *ngFor="let hero of heroes"
   [class.selected]="hero === selectedHero"
   (click)="onSelect(hero)">
-
-        <span class="badge">{{hero.id}}</span> {{hero.name}}
-
+        <span class="badge">{{hero.id}}</span> {{hero.product_name}}
   </li>
 </ul>
 <div *ngIf="selectedHero">
